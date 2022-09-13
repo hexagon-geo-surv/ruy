@@ -436,6 +436,13 @@ cc_library(
 )
 
 cc_library(
+    name = "multithread_context",
+    hdrs = ["multithread_context.h"],
+    copts = ruy_copts(),
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "matrix",
     hdrs = ["matrix.h"],
     copts = ruy_copts(),
@@ -903,6 +910,7 @@ cc_library(
         ":check_macros",
         ":cpuinfo",
         ":have_built_path_for",
+        ":multithread_context",
         ":path",
         ":performance_advisory",
         ":platform",
@@ -969,6 +977,7 @@ cc_library(
         ":mat",
         ":matrix",
         ":mul_params",
+        ":multithread_context",
         ":opt_set",
         ":side_pair",
         ":size_util",
